@@ -1,10 +1,14 @@
-import Image from "next/image";
+"use client"
+
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter()
+
   return (
     <>
-      {/* <Image /> */}
       <h1>Article 1 heading</h1>
+      <button onClick={() => router.push("/")}>Go to homepage</button>
     </>
   );
 }
