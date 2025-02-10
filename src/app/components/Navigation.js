@@ -25,6 +25,12 @@ export default function Navigation() {
                 <li>
                     <Link href="/users-server" className={pathname === "/users-server" ? "text-accent" : ""}>users-server</Link>
                 </li>
+                <li>
+                    <Link href="/users-server2" className={pathname === "/users-server2" ? "text-accent" : ""}>users-server2</Link>
+                </li>
+                <li>
+                    <Link href="/posts-server" className={pathname === "/posts-server" ? "text-accent" : ""}>posts-server</Link>
+                </li>
             </ul>
         </nav>
     )
