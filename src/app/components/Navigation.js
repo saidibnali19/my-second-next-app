@@ -19,6 +19,10 @@ export default function Navigation() {
 
                 </li>
                 <li>
+                    <Link href="/posts-client" className={pathname === "/posts-client" ? "text-accent" : ""}>Posts-client</Link>
+
+                </li>
+                <li>
                     <Link href="/users-server" className={pathname === "/users-server" ? "text-accent" : ""}>users-server</Link>
                 </li>
             </ul>
