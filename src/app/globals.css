@@ -59,3 +59,45 @@ img {
     width: 100%;
     object-fit: cover;
 }
+
+div:has(> .user-form) {
+    > form {
+        padding-block: 1rem;
+        display: flex;
+        gap: 1rem;
+    }
+
+    input,
+    button {
+        border-radius: 0.25rem;
+        padding: 0.5em 1.5em;
+    }
+
+    input {
+        border: 2px solid gray;
+    }
+
+    button {
+        border: none;
+        background-color: dodgerblue;
+        color: white;
+        cursor: pointer;
+
+        &:where(:hover, :focus-visible) {
+            opacity: 0.75;
+        }
+    }
+}
+
+div:has(> p) {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
+
+    > p {
+        padding: 1rem;
+        background-color: grey;
+        border-radius: 0.5rem;
+        color: white;
+    }
+}
