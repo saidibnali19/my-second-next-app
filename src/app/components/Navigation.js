@@ -1,4 +1,5 @@
 "use client"
+import { SignInButton, UserButton, SignedIn, SignedOut } from "@clerk/nextjs";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -6,7 +7,7 @@ export default function Navigation() {
     const pathname = usePathname()
 
     return (
-        <nav className="primary-nav | wrapper">
+        <nav className="primary-nav | wrapper flex">
             <ul className="flex" role="list">
                 <li>
                     <Link href="/" className={pathname === "/" ? "text-accent" : ""}>Home</Link>
@@ -25,6 +26,12 @@ export default function Navigation() {
                     <Link href="/mock-users" className={pathname === "/mock-users" ? "text-accent" : ""}>Mock-users</Link>
                 </li>
             </ul>
+            <SignedOut>
+                <SignInButton mode="modal" />
+            </SignedOut>
+            <SignedIn>
+                <UserButton />
+            </SignedIn>
         </nav>
     )
 }

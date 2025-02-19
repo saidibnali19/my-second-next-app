@@ -20,6 +20,10 @@ img {
     list-style: none;
 }
 
+body {
+    padding-block-end: 3rem;
+}
+
 /* Utility classes */
 /* Typography */
 .text-accent {
@@ -43,6 +47,7 @@ img {
 /* Components */
 .primary-nav {
     padding: 1rem;
+    align-items: center;
 
     ul {
         align-items: center;
@@ -51,6 +56,19 @@ img {
 
         li {
             padding: 1rem;
+        }
+    }
+
+    button {
+        border: 2px solid dodgerblue;
+        cursor: pointer;
+        background-color: dodgerblue;
+        color: white;
+        padding: 0.5em 1em;
+        border-radius: 0.25rem;
+
+        &:is(:hover, :focus-visible) {
+            opacity: 0.7;
         }
     }
 }
